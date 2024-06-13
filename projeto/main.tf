@@ -6,7 +6,6 @@ resource "aws_vpc" "main" {
     Name = "app-vpc"
   }
 }
-################
 
 # PUBLIC SUBNETS
 resource "aws_subnet" "public-1a" {
@@ -18,7 +17,6 @@ resource "aws_subnet" "public-1a" {
     Name = "public-1a"
   }
 }
-
 resource "aws_subnet" "public-1b" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.2.0/24"
@@ -28,7 +26,6 @@ resource "aws_subnet" "public-1b" {
     Name = "public-1b"
   }
 }
-
 resource "aws_subnet" "public-1c" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.3.0/24"
@@ -38,7 +35,6 @@ resource "aws_subnet" "public-1c" {
     Name = "public-1c"
   }
 }
-###############
 
 
 # PRIVATE SUBNETS
@@ -51,7 +47,6 @@ resource "aws_subnet" "private-1a" {
     Name = "private-1a"
   }
 }
-
 resource "aws_subnet" "private-1b" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.20.0/24"
@@ -61,7 +56,6 @@ resource "aws_subnet" "private-1b" {
     Name = "private-1b"
   }
 }
-
 resource "aws_subnet" "private-1c" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.30.0/24"
@@ -71,4 +65,3 @@ resource "aws_subnet" "private-1c" {
     Name = "private-1c"
   }
 }
-###############
